@@ -75,7 +75,7 @@ function ChatBox2({
   }, []);
 
   useEffect(() => {
-    socket.current = io("ws://localhost:8800");
+    socket.current = io("https://facebook-socket.onrender.com");
     socket.current.emit("new-user-add", user.id);
     socket.current.on("get-users", (users) => {
       setOnlineUsers(users);
