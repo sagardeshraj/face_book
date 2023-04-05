@@ -1,0 +1,308 @@
+
+.chatbox{
+    position: fixed;
+    bottom: 0px;
+    right: 80px;
+    height: 465px;
+    width: 330px;
+    background-color: var(--bg-primary);
+    z-index: 99;
+    box-shadow: 1px 0px 11px -4px rgb(0 0 0 / 28%);
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.personDetail{
+    top: 0px; 
+    width: 100%;
+    height: 50px;
+    box-shadow: -1px 11px 13px -9px rgba(240,237,240,1);
+   display: flex;
+   justify-content: space-between;
+}
+
+
+.personDetail .left{
+    cursor: pointer;
+    display: flex;
+    padding: 2px;
+    margin: 2px;
+    border-radius: 5px;
+}
+.personDetail .left:hover{
+    background-color: hsl(200, 18%, 97%);
+    border-radius: 5px;
+    padding: 2px;
+}
+
+.personDetail .left .img{
+   padding: 5px;
+   background-color: inherit;
+   position: relative;
+
+}
+
+.personDetail .left img{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+
+.personDetail .left .name{
+    display: flex;
+    align-items: center;
+    margin-top: -9px;
+    font-weight: 600;
+    padding-right: 5px;
+}
+
+.online{
+    position: absolute;
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    background-color: green;
+    z-index: 100000;
+    bottom: 6px;
+    right: 3px;
+}
+.offline{
+    position: absolute;
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    background-color: rgb(149, 6, 6);
+    z-index: 100000;
+    bottom: 6px;
+    right: 3px;
+
+}
+
+.chats{
+    height: 346px;
+    width: 100%;
+    overflow-y: scroll;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    font-weight: 400;
+
+}
+
+.bottom{
+    display: flex;
+    justify-content: space-between;
+}
+.bottom svg{
+    fill: var(--blue-color);
+}
+.bottom .icons{
+    margin-left: 8px;
+    margin-top: 16px;
+    display: flex;
+    gap: 9px;
+}
+.bottom .icons svg:nth-child(2){
+    height: 22px;
+}
+
+.inputEmoji{
+    width: 155px;
+    margin-left: -13px;
+    height: 33px;
+    margin-top: 13px;
+    border-radius: 23px;
+    overflow: hidden;
+    position: relative;
+    background-color: var(--bg-secondary);
+}
+
+.inputEmoji input{
+    margin-left: 16px;
+    height: 100%;
+    width: 80%;
+    outline: none;
+    border: none;
+    background-color: var(--bg-secondary);
+
+}
+
+.inputEmoji svg{
+    position: absolute;
+    right: 8px;
+    top:5px
+}
+
+.like{
+    margin-top: 15px;
+    margin-right: 10px;
+}
+.right .cross{
+  margin-top: 8px;
+  margin-right: 8px;
+  display: grid;
+  place-items: center;
+  padding: 5px;
+  border-radius: 50%;
+  background-color: #f0f2f5;
+}
+.right .cross:hover{
+    background-color: #d1d2d5;
+  
+}
+
+.chats Img{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+}
+
+.mine{
+    align-self: flex-end;
+    position: relative;
+    width: 80%;
+    margin: 2px;
+    display: flex;
+    flex-direction: column;
+}
+
+.him{
+    align-self: flex-start;
+    width: 80%;
+    margin: 2px;
+    position: relative;
+}
+
+.mine .singleChatBox{
+    display: flex;
+    justify-content: flex-end;
+    margin: 5px;
+    margin-right: 7px;
+}
+.mine .singleChatBox .chatText{
+    padding: 5px;
+    background: rgb(252,70,107);
+    background: linear-gradient(90deg, rgba(252,70,107,1) 3%, rgba(199,54,126,1) 50%, rgba(199,54,126,1) 81%);
+    border-radius: 14px;
+    color: white;
+    font-weight: 300;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 12px;
+    line-height: 18px;
+    word-wrap: break-word;
+    width: fit-content;
+    max-width: 80%;
+}
+
+
+.him .singleChatBox{
+    display: flex;
+    gap: 5px;
+    margin: 5px;
+    margin-left: 7px;
+}
+.him .singleChatBox .chatText{
+    background-color: var(--bg-secondary);
+    padding: 7px;
+    color: black;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 400;
+    width: fit-content;
+    max-width: 80%;
+    word-wrap: break-word;
+    border-radius: 14px;
+    line-height: 18px;
+    outline: none;
+}
+
+.mine .time{
+    align-self: flex-end;
+    color: grey;
+    font-size: xx-small;
+}
+.him .time{
+    align-self: flex-start;
+    color: grey;
+    font-size: xx-small;
+    margin-left: 30px;
+    margin-top: -5px;
+}
+
+.vid_call {
+    position: absolute;
+    right: 45px;
+    top: 9px;
+    display: grid;
+    place-items: center;
+    padding: 5px;
+    border-radius: 50%;
+    background-color: #f0f2f5;
+    display: grid;
+    place-items: center;
+}
+
+.vid_call svg :hover{
+    fill: rgb(237, 0, 0);
+}
+
+@media(max-width:400px){
+    .chatbox{
+        right: 26px;
+    }
+}
+@media(max-width:450px){
+    .chatbox{
+        right: 60px;
+    }
+}
+@media(max-width:424px){
+    .chatbox{
+        right: 44px;
+    }
+}
+
+.callingScreen{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgb(0, 0, 0,.9);
+    color: white;
+}
+
+.accept_call_from_other_side button{
+    border: none;
+    bottom:40px;
+    left:50%;
+    padding: 10px;
+    border-radius: 3px;
+    outline: none;
+    font-size: larger;
+    font-weight: 500;
+    color: white;
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
